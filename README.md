@@ -16,7 +16,7 @@ A RabbitMQ server is required to send player inventories. A fallback check verif
 
 This plugin only manages the sharing of player data when moving from one world to another, via a command that can be executed and linked to a portal for example.
 
-It does not manage the synchronization of worlds.
+It does not handle the synchronization of worlds.
 
 # Tests
 
