@@ -1,0 +1,43 @@
+# Plugin that links servers (inventories, chat)
+
+# RabbitMQ Credentials
+rabbit:
+    hostname: 'yourhostname'
+    port: 5670
+    username: 'yourusername'
+    password: 'yourpassword'
+    vhost: 'yourvhost'
+    
+# Enable/Disable the debug 
+# Debugs all the RabbitMQ packets, useful if there is an issue
+# Warning: Can spam under production when enabled
+debug: true
+
+# World default name where playerData are stored
+# If the world name any server is wrong, it can corrupt
+# the inventories, so change this value CAREFULLY!!
+worldName: world
+
+# RabbitMQ queue names
+queueNames:
+    receiveInventoryData: multiworld.survie.inventories
+    sendInventoryData: multiworld.survie.inventories
+    receiveChatData: multiworld.survie.chat
+    sendChatData: multiworld.survie.chat
+    sendCommandData: multiworld.survie.command
+    receiveCommandData: multiworld.survie.command
+
+# Expiry of packets in ms
+# Advice: Have your dedicated servers at the exact same time
+# without delay (via a NTP server for example).
+# This can cause huge issues such as Expired packets & not 
+# delivering inventories / chat
+expiry:
+    chat: 10000
+    playerData: 86400000
+    commandToAnotherServer: 10000
+    
+# Data to copy paste
+dataToCopyPaste:
+    - 'world/stats/<uuid>.json'
+    - 'world/advancements/<uuid>.json'

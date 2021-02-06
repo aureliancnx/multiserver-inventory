@@ -1,0 +1,6 @@
+name: AsgardiaMultiworld
+main: fr.aureliancnx.multiworld.Multiworld
+version: 1.0
+author: aureliancnx
+description: multi world
+depend: [Vault]
