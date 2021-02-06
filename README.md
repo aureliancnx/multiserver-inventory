@@ -1,8 +1,8 @@
 # Multiserver inventory
 
-This project was created for a French Minecraft server but it's flexible enough for a quick implementation on your side. It requires only the AMQ library. The plugin allows to link player inventories on several servers, which allows for servers containing many players to split their worlds into small servers to avoid CPU and memory overload.
+This project was created for a French Minecraft server but it's flexible enough for a quick implementation on your side. It requires only the AMQ library. The plugin allows to link player inventories on several servers, which allows for servers containing many players to split their worlds into small servers to avoid CPU and memory overload. It also synchronizes the ingame chat between the servers.
 
-A RabbitMQ server is required to send player inventories. A fallback check verifies that the server has received the player's inventory data as well as the player's level, XPs and all the player's information in order to avoid loss or duplication of data.
+A RabbitMQ server is required to send player inventories. A fallback check verifies that the server has received the player's inventory data as well as the player's level, XPs and all the player's information in order to avoid loss or duplication of data. Must be used with Bungeecord.
 
 # Configuration
 
